@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { google } from 'googleapis';
+import { OAuth2Client } from 'google-auth-library';
 
 // Map of department-section combinations to folder IDs
 const folderIdMap: Record<string, Record<string, string>> = {
@@ -56,9 +57,11 @@ export async function GET(request: Request) {
       scopes: ['https://www.googleapis.com/auth/drive.readonly'],
     });
 
-    const authClient = await auth.getClient();
-    const drive = google.drive({ version: 'v3', auth: authClient });
-
+    const authClient = await auth.getClient() as OAuth2Client;
+    const drive = google.drive({ 
+      version: 'v3', 
+      auth: authClient 
+    });
     // Fetch files from the specified folder
     const response = await drive.files.list({
       q:  `'${folderId}' in parents and trashed = false`,
@@ -66,7 +69,7 @@ export async function GET(request: Request) {
     });
 
     // Process files to remove extensions
-    const processedFiles = response.data.files.map(file => {
+    const processedFiles = (response.data.files || []).map(file => {
       let name = file.name;
       if (name) {
         name = name.replace(/\.[^/.]+$/, "");
@@ -81,7 +84,7 @@ export async function GET(request: Request) {
   } catch (error) {
     console.error('Error fetching files from Google Drive:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch files from Google Drive', details: error.message },
+      { error: 'Failed to fetch files from Google Drive', details: error instanceof Error ? error.message : 'Unknown error' },
       { status: 500 }
     );
   }

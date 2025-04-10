@@ -35,9 +35,9 @@ export default function ContentGrid({ department, section }: ContentGridProps) {
         
         const data = await response.json();
         setFiles(data.files || []);
-      } catch (err) {
+      } catch (err: unknown) {
         console.error('Error loading content:', err);
-        setError(err.message || 'Failed to load content. Please try again later.');
+        setError(err instanceof Error ? err.message : 'Failed to load content. Please try again later.');
       } finally {
         setLoading(false);
       }

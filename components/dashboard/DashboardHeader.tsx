@@ -1,9 +1,9 @@
 'use client';
 
-import { useAuth } from '@clerk/nextjs';
+import {  useUser } from '@clerk/nextjs';
 
 export default function DashboardHeader() {
-  const { user } = useAuth();
+  const {  user } = useUser();
   
   return (
     <header className="dashboard-header">
