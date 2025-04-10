@@ -6,33 +6,33 @@ import { OAuth2Client } from 'google-auth-library';
 const folderIdMap: Record<string, Record<string, string>> = {
   'computer-science': {
     'notes': '1ewBoGKJt6UjyOQbsHp6nyTFLISx6cEDS',
-    'question-papers': '1cHU-bGcHnVrUG3OJVlW9uiRhPd4636EQ',
-    'study-materials': '1VNz29psVOPQWjjJ68SexO55yVRZ2JRxW'
+    'pyqs': '1cHU-bGcHnVrUG3OJVlW9uiRhPd4636EQ',
+    'books': '1VNz29psVOPQWjjJ68SexO55yVRZ2JRxW'
   },
   'mathematics': {
     'notes': '1SJTcFUerAU0M5G-OPiYcRQs_X84mHR4E',
-    'question-papers': '1rNV1aP08Pm_gDhciH6GNoz9EmuwgVUf4',
-    'study-materials': '1zwu0qNesW6JBZynir6ND7XBKsIzh4yS_'
+    'pyqs': '1rNV1aP08Pm_gDhciH6GNoz9EmuwgVUf4',
+    'books': '1zwu0qNesW6JBZynir6ND7XBKsIzh4yS_'
   },
   'physics': {
     'notes': '1Plkwv1Lvs-lM66H_k2BcWoCAeHUmfUTY',
-    'question-papers': '1LT176eIeIL51ViB8mTYUPROmG2ytR7Xe',
-    'study-materials': '1Fjo9lmPEQz8EZYSJfGtCj2TqM_hgaaEg'
+    'pyqs': '1LT176eIeIL51ViB8mTYUPROmG2ytR7Xe',
+    'books': '1Fjo9lmPEQz8EZYSJfGtCj2TqM_hgaaEg'
   },
   'chemistry': {
     'notes': '1MX22IwQKwW19MEepV4GSEyf3J0c20DvD',
-    'question-papers': '1QcA0PCEXouQ2hnLpTqgulNJPGltC8hlp',
-    'study-materials': '1qd-t0jak6sZ5RwgCybmWacm2xtVyMrgk'
+    'pyqs': '1QcA0PCEXouQ2hnLpTqgulNJPGltC8hlp',
+    'books': '1qd-t0jak6sZ5RwgCybmWacm2xtVyMrgk'
   },
   'botany': {
     'notes': '1Dfwsv-VJT6f6D0jHUEREjNAE1Nl_UvmC',
-    'question-papers': '1H5cuRW0FaKGkYK16ehRkrOu0tF44xww-',
-    'study-materials': '1qOgpLkAmTJgZxWHEeZwNIypEuXxE85Pn'
+    'pyqs': '1H5cuRW0FaKGkYK16ehRkrOu0tF44xww-',
+    'books': '1qOgpLkAmTJgZxWHEeZwNIypEuXxE85Pn'
   },
   'zoology': {
     'notes': '1Zyu4PDiDp286v881VijBMuJ6h6jrd1ZH',
-    'question-papers': '1VnpQQj77oxQYrAeMxeg0i4CVrN3hiDhb',
-    'study-materials': '1pUf3i2dCxe3VfB1C6cQ7YZkJflYpPE4v'
+    'pyqs': '1VnpQQj77oxQYrAeMxeg0i4CVrN3hiDhb',
+    'books': '1pUf3i2dCxe3VfB1C6cQ7YZkJflYpPE4v'
   },
 };
 
