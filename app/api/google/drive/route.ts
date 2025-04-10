@@ -41,31 +41,30 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const department = searchParams.get('department');
     const section = searchParams.get('section');
-    
+
     if (!department || !section) {
       return NextResponse.json({ error: 'Department and section are required' }, { status: 400 });
     }
-    
+
     // Get folder ID from the map
     const folderId = folderIdMap[department]?.[section];
-    
-    
-    
+
+
     // Initialize Google Drive API
     const auth = new google.auth.GoogleAuth({
-      keyFile: process.env.GOOGLE_APPLICATION_CREDENTIALS,
+      credentials: JSON.parse(process.env.GOOGLE_CREDENTIALS || '{}'),
       scopes: ['https://www.googleapis.com/auth/drive.readonly'],
     });
-    
+
     const authClient = await auth.getClient();
     const drive = google.drive({ version: 'v3', auth: authClient });
-    
+
     // Fetch files from the specified folder
     const response = await drive.files.list({
-      q: `'${folderId}' in parents and trashed = false`,
+      q:  `'${folderId}' in parents and trashed = false`,
       fields: 'files(id, name, webViewLink, mimeType)',
     });
-    
+
     // Process files to remove extensions
     const processedFiles = response.data.files.map(file => {
       let name = file.name;
@@ -77,7 +76,7 @@ export async function GET(request: Request) {
         displayName: name || file.name
       };
     });
-    
+
     return NextResponse.json({ files: processedFiles });
   } catch (error) {
     console.error('Error fetching files from Google Drive:', error);
@@ -86,4 +85,4 @@ export async function GET(request: Request) {
       { status: 500 }
     );
   }
-} 
+}
