@@ -1,7 +1,6 @@
 import { FiCode, FiPieChart } from 'react-icons/fi';
 import { IoMdAt } from 'react-icons/io';
 import { GiChemicalDrop, GiOak, GiTigerHead } from 'react-icons/gi';
-import Image from 'next/image';
 
 interface DepartmentGridProps {
   onDepartmentSelect: (department: string) => void;

@@ -23,7 +23,7 @@ const Events = () => {
               <div className="month">APR</div>
             </div>
             <div className="event-info">
-              <h3>Author Talk: "The Future of Science"</h3>
+            <h3>Author Talk: &quot;The Future of Science&quot;</h3>
               <p>Join bestselling author James Peterson for a discussion on his latest book, 6:00 PM, Auditorium</p>
             </div>
           </div>
