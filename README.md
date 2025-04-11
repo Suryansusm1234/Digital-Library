@@ -1,7 +1,7 @@
 # College Library Management System
 
 ## Overview
-A comprehensive digital library management system developed for etech college by the Department of Computer Science and CODE-CREW coding society. This platform provides students with easy access to educational resources including books, previous year question papers (PYQs), and study notes across multiple departments.
+A comprehensive digital library management system developed for college . This platform provides students with easy access to educational resources including books, previous year question papers (PYQs), and study notes across multiple departments.Here is the clink to the [Live website](https://college-library-sage.vercel.app/)
 
 ## Features
 - **Authentication**: Secure login system powered by Clerk
@@ -108,12 +108,10 @@ Files are stored in Google Drive with:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## Team
-- Department of Computer Science, etech college
-- CODE-CREW Coding Society
+
 
 ## License
-This project is proprietary software belonging to etech college.
+This project is proprietary software belonging to Suryansu Sanjeebani Mohanty .
 
 ## Acknowledgments
 - Google Cloud Platform for file storage
@@ -123,5 +121,4 @@ This project is proprietary software belonging to etech college.
 
 ## Contact
 For any queries, please contact:
-- CODE-CREW Coding Society
-- Department of Computer Science, etech college
+- ssanjeebanimohanty@gmail.com
