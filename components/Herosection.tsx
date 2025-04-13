@@ -20,7 +20,7 @@ const Herosection = () => {
         <h1>Discover. Learn. Grow.</h1>
         <p className="hero-subtitle">Your gateway to knowledge and innovation</p>
         <div className="hero-buttons">
-          <Link href="/collection" className="btn btn-primary">
+          <Link href="/dashboard" className="btn btn-primary">
             Browse Collection
           </Link>
           <Link href="/about" className="btn btn-secondary">
