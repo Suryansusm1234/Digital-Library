@@ -10,7 +10,7 @@ const Herosection = () => {
       <div className="container">
         <div className="logo-container">
           <Image 
-            src="/Society Logo.png" 
+            src="/etech logo new.png" 
             alt="Society Logo" 
             className="hero-logo"
             width={150}
@@ -28,7 +28,7 @@ const Herosection = () => {
           </Link>
         </div>
         <div className="credit">
-          <p>Created by CODE CREW - CSE Department</p>
+          <p>Created by Suryansu</p>
         </div>
       </div>
     </section>
